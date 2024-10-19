@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
     } else {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       prefs.setBool('isLoggedIn', true); // Set login state to true
-      Get.off(() => MainPage()); // Navigate to MainPage
+      Get.off(() => Homenav()); // Navigate to MainPage
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text("Successfully logged in!"),
